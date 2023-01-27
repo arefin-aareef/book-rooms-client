@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Inter&family=Montserrat:wght@500&family=Open+Sans:ital@0;1&family=Poppins:wght@500&family=Public+Sans:wght@300;400&family=Work+Sans&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
 }
 
 code {
@@ -28,4 +31,32 @@ code {
 
 .navbar-nav {
   margin-left: auto !important;
+}
+
+.smallimg {
+  height: 200px;
+  width: 100% !important;
+  border-radius: 5px !important;
+}
+
+h1 {
+  font-size: 20px !important;
+}
+
+.btn {
+  background-color: black !important;
+  color: white !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.bs {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 20px !important;
+  border-radius: 5px !important;
+  padding: 20px !important;
+}
+
+.bigimg {
+  height: 400px;
 }
