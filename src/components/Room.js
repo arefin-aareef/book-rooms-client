@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import { Modal, Button, Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Room({room}) {
 
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
     <div className='row bs'>
       <div className="col-md-4">
-        <img src={room.imageurls[1]} className='smallimg' />
+        <img src={room.imageurls[0]} className='smallimg' />
       </div>
 
       <div className="col-md-7">
@@ -23,6 +23,9 @@ function Room({room}) {
         </b>
 
         <div style={{float: 'right'}}>
+          <Link to={`/book/${room._id}`}>
+            <button className='btn btn-primary me-2'>Book Now</button>
+          </Link>
           <button className='btn btn-primary' onClick={handleShow}>View Details</button>
         </div>
       </div>
