@@ -10,19 +10,13 @@ function Bookingscreen ({  }) {
   const [loading, setloading] = useState(true)
   const [error, seterror] = useState()
   const [room, setroom] = useState()
-
-
-
   let { roomid, fromdate, todate } = useParams();
-
   const firstdate = moment(fromdate , 'DD-MM-YYYY')
   const lastdate = moment(todate , 'DD-MM-YYYY')
-
   const totaldays = moment.duration(lastdate.diff(firstdate)).asDays()+1
   const [totalamount, settotalamount] = useState()
 
   useEffect(() => {
-
     async function fetchData() {
       try {
         setloading(true);
@@ -35,9 +29,7 @@ function Bookingscreen ({  }) {
         seterror(true);
       }
     }
-
     fetchData();
-
   }, []);
 
   async function bookRoom(){
