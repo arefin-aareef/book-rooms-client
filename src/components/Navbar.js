@@ -3,8 +3,8 @@ import React from "react";
 function Navbar() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
   function logout() {
-      localStorage.removeItem('currentUser')
-      window.location.href='/login'
+    localStorage.removeItem("currentUser");
+    window.location.href = "/login";
   }
   return (
     <div>
@@ -21,7 +21,9 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon" style={{color: 'white'}}><i class="fa-solid fa-bars"></i></span>
+          <span class="navbar-toggler-icon" style={{ color: "white" }}>
+            <i class="fa-solid fa-bars"></i>
+          </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mr-5">
@@ -35,8 +37,9 @@ function Navbar() {
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
-                  >
-                    <i class="fa fa-user"></i> user
+                  > 
+                    <i class="fa fa-user mr-2"></i>
+                    {JSON.parse(localStorage.getItem("currentUser")).data.name}
                   </button>
                   <div
                     class="dropdown-menu"
