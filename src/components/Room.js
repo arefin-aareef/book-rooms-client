@@ -24,7 +24,7 @@ function Room({room}) {
 
         <div style={{float: 'right'}}>
           <Link to={`/book/${room._id}`}>
-            <button className='btn btn-primary me-2'>Book Now</button>
+            <button className='btn btn-primary mr-2'>Book Now</button>
           </Link>
           <button className='btn btn-primary' onClick={handleShow}>View Details</button>
         </div>
