@@ -35,8 +35,8 @@ function Loginscreen() {
       <div className="col-md-5 mt-5">
       {error && (<Error message='Invalid Credentials' />)}
         <div className='bs'>
-          <h2 className='text-center p-3'>Login</h2>
-          <input type="text" className='form-control' placeholder='Email' value={email} onChange={(e) => {setemail(e.target.value)}} />
+          <h2 className='text-center p-3 '>Login</h2>
+          <input type="text" className='form-control mb-2' placeholder='Email' value={email} onChange={(e) => {setemail(e.target.value)}} />
           <input type="text" className='form-control' placeholder='Password' value={password} onChange={(e) => {setpassword(e.target.value)}} />
           <button className='btn btn-primary mt-3' onClick={Login}>Login</button>
         </div>

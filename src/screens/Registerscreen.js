@@ -51,9 +51,9 @@ function Registerscreen() {
           {success && (<Success message="Registration Successful" />)}
             <div className='bs'>
               <h2 className='text-center p-3'>Register</h2>
-              <input type="text" className='form-control' placeholder='Name' value={name} onChange={(e) => {setname(e.target.value)}} />
-              <input type="text" className='form-control' placeholder='Email' value={email} onChange={(e) => {setemail(e.target.value)}} />
-              <input type="text" className='form-control' placeholder='Password' value={password} onChange={(e) => {setpassword(e.target.value)}} />
+              <input type="text" className='form-control mb-2' placeholder='Name' value={name} onChange={(e) => {setname(e.target.value)}} />
+              <input type="text" className='form-control mb-2' placeholder='Email' value={email} onChange={(e) => {setemail(e.target.value)}} />
+              <input type="text" className='form-control mb-2' placeholder='Password' value={password} onChange={(e) => {setpassword(e.target.value)}} />
               <input type="text" className='form-control' placeholder='Confirm Password' value={cpassword} onChange={(e) => {setcpassword(e.target.value)}} />
               <button className='btn btn-primary mt-3' onClick={register}>Register</button>
             </div>

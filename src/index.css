@@ -15,7 +15,9 @@ code {
     monospace;
 }
 
-/* Navbar */
+p {
+  font-size: 16px !important;
+}
 
 .navbar {
   background-color: black !important;
@@ -61,8 +63,15 @@ h1 {
   height: 400px;
 }
 
-input {
+input, select, .ant-picker  {
   box-shadow: none !important;
   margin-top: 10px;
   border: 1px solid black !important;
+  width: 100% !important;
+  border-radius: 3px !important;
+  height: 35px !important;
+}
+
+.ant-picker-input input {
+  border: none !important;
 }

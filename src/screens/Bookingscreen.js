@@ -19,7 +19,13 @@ function Bookingscreen({}) {
   const [totalamount, settotalamount] = useState();
 
   useEffect(() => {
+    
     async function fetchData() {
+
+      if(!localStorage.getItem('currentUser')){
+        window.location.reload='/login'
+      }
+
       try {
         setloading(true);
         const data = (await axios.post("/api/rooms/getroombyid", { roomid: roomid })).data;

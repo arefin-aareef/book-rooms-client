@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <div>
       <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/home">
           Book Rooms
         </a>
         <button
@@ -45,8 +45,8 @@ function Navbar() {
                     class="dropdown-menu"
                     aria-labelledby="dropdownMenuButton"
                   >
-                    <a class="dropdown-item" href="/bookings">
-                      Bookings
+                    <a class="dropdown-item" href="/profile">
+                      Profile
                     </a>
                     <a class="dropdown-item" href="#" onClick={logout}>
                       Logout
