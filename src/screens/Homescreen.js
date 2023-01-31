@@ -35,12 +35,6 @@ function Homescreen() {
     fetchData();
   }, []);
 
-  // function filterByDate(dates)
-  // {
-  //   setfromdate(dates[0]);
-  //   settodate(dates[1]);
-  // }
-
   const filterByDate = (dates) => {
     const from = moment(dates[0].$d).format("DD-MM-YYYY");
     const to = moment(dates[1].$d).format("DD-MM-YYYY");

@@ -6,6 +6,7 @@ import Loader from "../components/Loader";
 import Error from "../components/Error";
 import moment from "moment";
 import StripeCheckout from "react-stripe-checkout";
+import Swal from 'sweetalert2'
 
 function Bookingscreen({}) {
   const [loading, setloading] = useState(true);
@@ -21,9 +22,7 @@ function Bookingscreen({}) {
     async function fetchData() {
       try {
         setloading(true);
-        const data = (
-          await axios.post("/api/rooms/getroombyid", { roomid: roomid })
-        ).data;
+        const data = (await axios.post("/api/rooms/getroombyid", { roomid: roomid })).data;
         settotalamount(data.rentperday * totaldays);
         setroom(data);
         setloading(false);
@@ -48,8 +47,17 @@ function Bookingscreen({}) {
       token
     };
     try {
+      setloading(true)
       const result = await axios.post("/api/bookings/bookroom", bookingDetails);
-    } catch (error) {}
+      setloading(false)
+      Swal.fire('Congratulation' , 'Your room booked successfully' , 'success').then(result => {
+        window.location.href='/bookings'
+      })
+    } catch (error) {
+      setloading(false)
+      Swal.fire('Whoops' , 'Something went wrong' , 'error')
+    }
+    
   }
 
   return (
