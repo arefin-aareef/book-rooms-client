@@ -95,16 +95,16 @@ function Homescreen() {
   return (
     <div className="container">
       <div className="row mt-5 bs justify-content-center align-items-center">
-        <div className="col-md-3 pb-0">
+        <div className="col-md-3 pb-0 mb-2 mb-md-0">
           <RangePicker className='mt-0' format="DD-MM-YYYY" onChange={filterByDate} />
         </div>
 
-        <div className="col-md-3">
+        <div className="col-md-3 mb-2 mb-md-0">
           <input type="text" className="form-control" placeholder="Search rooms" value={searchkey} onChange={(e) => {setsearchkey(e.target.value)}} onKeyUp={filterBySearch} />
 
         </div>
 
-        <div className="col-md-3">
+        <div className="col-md-3 mb-2 mb-md-0">
           <select className="form-control" value={type} onChange={(e) => {filterByType(e.target.value)}}>
             <option value="all">All</option>
             <option value="delux">Delux</option>

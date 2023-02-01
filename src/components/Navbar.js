@@ -9,6 +9,7 @@ function Navbar() {
   return (
     <div>
       <nav class="navbar navbar-expand-lg">
+      <div className="container">
         <a class="navbar-brand" href="/home">
           Book Rooms
         </a>
@@ -26,7 +27,7 @@ function Navbar() {
           </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mr-5">
+          <ul class="navbar-nav">
             {user ? (
               <>
                 <div class="dropdown">
@@ -69,6 +70,7 @@ function Navbar() {
               </>
             )}
           </ul>
+        </div>
         </div>
       </nav>
     </div>

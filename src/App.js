@@ -8,12 +8,14 @@ import Registerscreen from './screens/Registerscreen';
 import Loginscreen from './screens/Loginscreen';
 import Profilescreen from './screens/Profilescreen';
 import Adminscreen from './screens/Adminscreen';
+import Landingscreen from './screens/Landingscreen';
 
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <div className="container">
       <BrowserRouter>
         <Routes>
           <Route path='/home' element={<Homescreen />} />
@@ -22,9 +24,11 @@ function App() {
           <Route path='/login' element={<Loginscreen />} />
           <Route path='/profile' element={<Profilescreen />} />
           <Route path='/admin' element={<Adminscreen />} />
+          <Route path='/' element={<Landingscreen />} />
 
         </Routes>
       </BrowserRouter>
+      </div>
     </div>
   );
 } 

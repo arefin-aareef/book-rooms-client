@@ -57,7 +57,7 @@ function Bookingscreen({}) {
       const result = await axios.post("/api/bookings/bookroom", bookingDetails);
       setloading(false)
       Swal.fire('Congratulation' , 'Your room booked successfully' , 'success').then(result => {
-        window.location.href='/bookings'
+        window.location.href='/profile'
       })
     } catch (error) {
       setloading(false)
@@ -107,7 +107,7 @@ function Bookingscreen({}) {
                 <StripeCheckout
                   amount={totalamount * 100}
                   token={onToken}
-                  currency="INR"
+                  currency="BDT"
                   stripeKey="pk_test_51MW2SBSDIuxCNrHeDeft8ril9gI6gLYWmRp39CcFNIEfIOEHIvdaTYjkNcqdrLTdPTS2oAZp9slNdn9eAi4zdZdN00waHzwN82"
                 >
                   <button className="btn btn-primary">
