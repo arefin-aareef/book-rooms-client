@@ -17,7 +17,7 @@ function Profilescreen() {
   }, []);
 
   return (
-    <div className="ml-3 mt-3">
+    <div className="ml-3 mt-3 container mx-auto">
       <Tabs defaultActiveKey="1">
         <TabPane tab="Profile" key="1">
           <h1>My Profile</h1>
@@ -26,7 +26,7 @@ function Profilescreen() {
 
           <h1>Name : {user.name}</h1>
           <h1>Email : {user.email}</h1>
-          <h1>isAdmin : {user.isAdmin ? "YES" : "NO"}</h1>
+          <h1>Admin : {user.isAdmin ? "YES" : "NO"}</h1>
         </TabPane>
         <TabPane tab="Bookings" key="2">
           <MyBookings />

@@ -72,7 +72,7 @@ function Bookingscreen({}) {
         <Loader />
       ) : room ? (
         <div>
-          <div className="row justify-content-center mt-5 bs">
+          <div className="row justify-content-center mt-5 bs container mx-auto">
             <div className="col-md-6">
               <h1>{room.name}</h1>
               <img src={room.imageurls[0]} className="bigimg" />
